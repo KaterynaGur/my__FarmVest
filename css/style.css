@@ -940,6 +940,7 @@ html.dark .spollers-question__item {
 .spollers-question__title {
 	width: 100%;
 	background-color: transparent;
+	color: #263238;
 	display: block;
 	text-align: left;
 	font-size: 24px;
