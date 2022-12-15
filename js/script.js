@@ -536,8 +536,6 @@ function myFunction() {
 };
 
 //===================================================================================================================================================================
-
-
 // Get all sections that have an ID defined
 const sections = document.querySelectorAll("section[id]");
 
@@ -594,25 +592,25 @@ function windowLoad() {
 
 	// Зміна теми по кліку
 	const themeButton = document.querySelector('.page__theme');
-	const resetButton = document.querySelector('.page__reset');
+	// const resetButton = document.querySelector('.page__reset');
 	if (themeButton) {
 		themeButton.addEventListener("click", function (e) {
-			resetButton.classList.add('active');
+			// resetButton.classList.add('active');
 			changeTheme(true);
 		});
 	}
-	if (resetButton) {
-		resetButton.addEventListener("click", function (e) {
-			resetButton.classList.remove('active');
-			localStorage.setItem('user-theme', '');
-		});
-	}
+	// if (resetButton) {
+	// 	resetButton.addEventListener("click", function (e) {
+	// 		resetButton.classList.remove('active');
+	// 		localStorage.setItem('user-theme', '');
+	// 	});
+	// }
 
 	// Функція додавання класу теми
 	function setThemeClass() {
 		if (saveUserTheme) {
 			htmlBlock.classList.add(saveUserTheme)
-			resetButton.classList.add('active');
+			// resetButton.classList.add('active');
 		} else {
 			htmlBlock.classList.add(userTheme);
 		}
