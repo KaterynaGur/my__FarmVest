@@ -989,6 +989,9 @@ html.dark .spollers-question__item {
 	gap: 20px;
 	justify-content: space-between;
 }
+button.spollers-question__title {
+	color: #263238;
+}
 html.dark .spollers-question__title {
 	color: #fff;
 }
