@@ -688,7 +688,7 @@ html.dark .form {
 .partners__item {
 	text-align: center;
 }
-.partners__item img {
+.partners__item svg {
 	max-width: 100%;
 }
 .partners__svg {
@@ -719,6 +719,10 @@ html.dark .partners__svg_3 .path_1{
 @media (max-width: 1023.99px) {
 	.partners__container {
 		padding: 40px 30px;
+		row-gap: 25px;
+	}
+	.partners__item {
+		max-width: 50%;
 	}
 }
 @media (max-width: 767.98px) {
