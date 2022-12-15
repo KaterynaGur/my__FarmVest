@@ -205,24 +205,27 @@ html.dark .sticky {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 63%;
+	width: 67%;
 	gap: 30px;
 }
 .header__burger {
 	display: none;
 }
 .header__menu {
+	
 }
 .header__buttons {
 	display: flex;
 	column-gap: 16px;
 }
 .header__button.button {
+	flex-shrink: 0;
 	min-width: 142px;
 	padding: 22px 24px;
 	transition: all 0.3s ease 0s;
 }
 .header__button.button_1 {
+	flex-shrink: 0;
 	min-width: 142px;
 	padding: 21px 24px;
 	transition: all 0.3s ease 0s;
@@ -233,8 +236,51 @@ html.dark .sticky {
 .header.sticky .header__button.button_1 {
 	padding: 16px 24px;
 }
+.page__action {
+	position: relative;
+	align-self: center;
+	margin-right: 10px;
+	opacity: 0.8;
+	width: 30px;
+	height: 30px;
+}
+.page__theme{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.page__reset{
+	opacity: 0;
+	visibility: hidden;
+}
+.page__reset.active{
+	opacity: 1;
+	visibility: visible;
+}
+.page__reset::before{
+	content:"x";
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	font-size: 7px;
+	border-radius: 50%;
+	line-height: 10px;
+	color: #fff;
+	text-align: center;
+	background-color: #666;
+}
+html.dark .page__theme {
+	background: url('../img/main-block/darktheme/sun.svg') 0 0 / 100% no-repeat;
+}
+html.light .page__theme {
+	background: url('../img/main-block/darktheme/moon.svg') 0 0 / 100% no-repeat;
+}
 .menu__list {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	row-gap: 10px;
 	column-gap: 44px;
@@ -344,7 +390,7 @@ html.dark .sticky {
 		height: 100%;
 		overflow: auto;
 		transition: all 0.3s ease 0s;
-		padding: 70px 10px 20px 10px;
+		padding: 90px 10px 20px 10px;
 		flex-direction: column;
 		background-color: #ffffff;
 		z-index: 3;
@@ -365,6 +411,15 @@ html.dark .sticky {
 	.menu__link {
 		font-size: 24px;
 	}
+	.page__action {
+		position: absolute;
+		top: 3%;
+		left: 30px;
+	}
+	.page__theme {
+		width: 25px;
+		height: 25px;
+	}
 	.sticky {
 		padding-top: 25px;
 		padding-bottom: 25px;
@@ -375,53 +430,32 @@ html.dark .sticky {
 		padding-left: 16px;
 		padding-right: 16px;
 	}
+	.page__action {
+		width: 30px;
+		height: 20px;
+		left: 16px;
+	}
+	.page__theme {
+		width: 23px;
+		height: 23px;
+	}
 }
 @media (max-width: 449.99px) {
 	.header__logo {
 		font-size: 26px;
   }
+  .sticky {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+	.header__burger {
+		height: 18px;
+	}
+	.header__burger span{
+		top: 8px;
+	}
 }
 /*==============================*/
-.page__action {
-	position:absolute;
-	top: 18%;
-	right: 30px;
-}
-.page__theme{
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
-.page__reset{
-	opacity: 0;
-	visibility: hidden;
-}
-.page__reset.active{
-	opacity: 1;
-	visibility: visible;
-}
-.page__reset::before{
-	content:"x";
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
-	width: 10px;
-	height: 10px;
-	font-size: 7px;
-	border-radius: 50%;
-	line-height: 10px;
-	color: #fff;
-	text-align: center;
-	background-color: #666;
-}
-html.dark .page__theme {
-	background: url('../img/main-block/darktheme/sun.svg') 0 0 / 100% no-repeat;
-}
-html.light .page__theme {
-	background: url('../img/main-block/darktheme/moon.svg') 0 0 / 100% no-repeat;
-}
-
 .main-block {
 }
 .main-block__container {
@@ -554,9 +588,6 @@ html.dark .form {
 	}
 }
 @media (max-width: 1399.99px) {
-	.page__action {
-		top: 22%;
-	}
 	.main-block__container {
 		padding-top: 210px;
 		padding-bottom: 60px;
@@ -582,10 +613,6 @@ html.dark .form {
 	}
 }
 @media (max-width: 1023.99px) {
-	.page__action {
-		top: 5%;
-		right: 9%;
-	}
 	.main-block__container {
 		padding: 125px 30px 40px 30px;
 	}
@@ -623,10 +650,6 @@ html.dark .form {
 	}
 }
 @media (max-width: 767.98px) {
-	.page__action {
-		top: 4%;
-		right: 12%;
-	}
 	.main-block__container {
 		padding: 100px 16px 45px 16px;
 	}
@@ -645,6 +668,11 @@ html.dark .form {
 	}
 	.icons-main-block {
 		display: none;
+	}
+}
+@media (max-width: 449.98px) {
+	.main-block__container {
+		padding: 100px 16px 45px 16px;
 	}
 }
 /*==============================*/
@@ -852,6 +880,15 @@ html.dark .how-block__circle::before {
 		padding-right: 0;
 	}
 }
+@media (max-width: 449.98px) {
+	.items-how-block__icon {
+		width: 80px;
+		height: 80px;
+	}
+	.items-how-block__icon img {
+		max-width: 60%;
+	}
+}
 /*==============================*/
 .question {
 }
@@ -939,6 +976,7 @@ html.dark .spollers-question__item {
 }
 .spollers-question__title {
 	width: 100%;
+	cursor: pointer;
 	background-color: transparent;
 	color: #263238;
 	display: block;
@@ -1111,7 +1149,7 @@ html.dark .content-why__list>li::before {
 	align-items: center;
 	background-color: rgba(0, 128, 0, 0.1);
 	border-radius: 20px;
-	padding: 0px 0px;
+	padding: 40px 44px;
 	overflow: hidden;
 }
 html.dark .gallery-why {
