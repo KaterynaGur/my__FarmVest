@@ -454,6 +454,12 @@ html.light .page__theme {
 	.header__burger span{
 		top: 8px;
 	}
+	.header__burger.active:before{
+		top: 8px;
+	}
+	.header__burger.active:after{
+		bottom: 8px;
+	}
 }
 /*==============================*/
 .main-block {
@@ -722,7 +728,7 @@ html.dark .partners__svg_3 .path_1{
 		row-gap: 25px;
 	}
 	.partners__item {
-		max-width: 50%;
+		width: 50%;
 	}
 }
 @media (max-width: 767.98px) {
