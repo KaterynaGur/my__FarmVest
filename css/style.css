@@ -205,7 +205,7 @@ html.dark .sticky {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 67%;
+	width: 69%;
 	gap: 30px;
 }
 .header__burger {
