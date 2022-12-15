@@ -882,8 +882,8 @@ html.dark .how-block__circle::before {
 }
 @media (max-width: 449.98px) {
 	.items-how-block__icon {
-		width: 80px;
-		height: 80px;
+		width: 70px;
+		height: 70px;
 	}
 	.items-how-block__icon img {
 		max-width: 60%;
