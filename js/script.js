@@ -592,25 +592,15 @@ function windowLoad() {
 
 	// Зміна теми по кліку
 	const themeButton = document.querySelector('.page__theme');
-	// const resetButton = document.querySelector('.page__reset');
 	if (themeButton) {
 		themeButton.addEventListener("click", function (e) {
-			// resetButton.classList.add('active');
 			changeTheme(true);
 		});
 	}
-	// if (resetButton) {
-	// 	resetButton.addEventListener("click", function (e) {
-	// 		resetButton.classList.remove('active');
-	// 		localStorage.setItem('user-theme', '');
-	// 	});
-	// }
-
 	// Функція додавання класу теми
 	function setThemeClass() {
 		if (saveUserTheme) {
 			htmlBlock.classList.add(saveUserTheme)
-			// resetButton.classList.add('active');
 		} else {
 			htmlBlock.classList.add(userTheme);
 		}
@@ -623,6 +613,7 @@ function windowLoad() {
 		let currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark';
 		let newTheme;
 
+
 		if (currentTheme === 'light') {
 			newTheme = 'dark';
 		} else if (currentTheme === 'dark') {
@@ -633,4 +624,3 @@ function windowLoad() {
 		saveTheme ? localStorage.setItem('user-theme', newTheme) : null;
 	}
 }
-

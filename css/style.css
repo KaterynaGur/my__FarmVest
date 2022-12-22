@@ -501,6 +501,15 @@ html.dark .icons-main-block__circle::before {
 	left: 0;
 	pointer-events: none;
 }
+.img-dark {
+	display: none;
+}
+html.dark .img-dark {
+	display: block;
+}
+html.dark .img-light {
+	display: none;
+}
 .icons-main-block__item {
 	opacity: 0.5;
 	position: absolute;
@@ -1014,7 +1023,7 @@ html.dark .spollers-question__title {
 	transition: all 0.3s ease 0s;
 }
 html.dark .spollers-question__title::after {
-
+	background: url("../img/question/arrow-dark.svg") center / 100% no-repeat;
 }
 .spollers-question__title._active::after {
 	transform: rotate(-180deg);
@@ -1558,25 +1567,21 @@ html.dark .footer {
 	stroke: #fff;
 	fill: #fff;
 }
-.social-contacts-footer__icon img {
-	stroke: #fff;
-	fill: #fff;
-}
 .social-contacts-footer__icon:hover {
 	background-color: #23b123;
 }
 .social-contacts-footer__icon:active {
 	background-color: #006e00;
 }
-/* html.dark .social-contacts-footer__icon {
-	background: #23B123;
+html.dark .social-contacts-footer__icon {
+	background: #ffffff;
 }
 html.dark .social-contacts-footer__icon:hover  {
-	background: #1b8b1b;
+	background: rgba(255, 255, 255, 0.9);
 }
 html.dark .social-contacts-footer__icon:active {
-	background: #015c01;
-} */
+	background:rgba(255, 255, 255, 0.5);
+}
 .contacts-footer__label {
 	font-weight: 700;
 	font-size: 16px;
