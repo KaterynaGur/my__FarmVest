@@ -1152,9 +1152,7 @@ html.dark .spollers-question__title::after {
 	height: 64px;
 	border-radius: 50%;
 	background-color: rgba(0, 128, 0, 0.1);
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
+	
 	box-sizing: border-box;
 	display: block;
 	text-align: center;
