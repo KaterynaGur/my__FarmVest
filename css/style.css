@@ -248,7 +248,7 @@ html.dark .sticky {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	outline: none;;
+	outline: none;
 }
 .page__reset{
 	opacity: 0;
@@ -1126,6 +1126,7 @@ html.dark .spollers-question__title::after {
 	row-gap: 48px;
 	margin-bottom: 48px;
 	counter-reset: ol-numbers;
+	list-style: none;
 }
 .content-why__list>li {
 	display: flex;
@@ -1154,6 +1155,8 @@ html.dark .spollers-question__title::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-right: 1px;
+	padding-top: 3px;
 }
 html.dark .content-why__list>li::before {
 	color:#fff;
