@@ -414,7 +414,7 @@ html.light .page__theme {
 	}
 	.page__action {
 		position: absolute;
-		top: 3%;
+		top: 3.8%;
 		left: 30px;
 	}
 	.page__theme {
@@ -435,10 +435,6 @@ html.light .page__theme {
 		width: 30px;
 		height: 20px;
 		left: 16px;
-	}
-	.page__theme {
-		width: 23px;
-		height: 23px;
 	}
 }
 @media (max-width: 449.99px) {
@@ -1152,7 +1148,7 @@ html.dark .spollers-question__title::after {
 	height: 64px;
 	border-radius: 50%;
 	background-color: rgba(0, 128, 0, 0.1);
-	
+	line-height: 42px;
 	box-sizing: border-box;
 	display: block;
 	text-align: center;
