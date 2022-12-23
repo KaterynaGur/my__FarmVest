@@ -1152,11 +1152,15 @@ html.dark .spollers-question__title::after {
 	height: 64px;
 	border-radius: 50%;
 	background-color: rgba(0, 128, 0, 0.1);
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
-	padding-right: 1px;
-	padding-top: 3px;
+	align-items: center; */
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	padding: 14px 14px;
+
+
 }
 html.dark .content-why__list>li::before {
 	color:#fff;
@@ -1578,13 +1582,13 @@ html.dark .footer {
 	background-color: #006e00;
 }
 html.dark .social-contacts-footer__icon {
-	background:rgba(255, 255, 255, 0.05);
+	background:rgba(255, 255, 255, 0.06);
 }
 html.dark .social-contacts-footer__icon:hover  {
 	background: rgba(255, 255, 255, 0.09);
 }
 html.dark .social-contacts-footer__icon:active {
-	background:rgba(255, 255, 255, 0.06);
+	background:rgba(255, 255, 255, 0.05);
 }
 .contacts-footer__label {
 	font-weight: 700;
